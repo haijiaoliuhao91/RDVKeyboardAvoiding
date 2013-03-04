@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B42F885716E53C7F00647705 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885616E53C7F00647705 /* UIKit.framework */; };
+		B42F885916E53C7F00647705 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885816E53C7F00647705 /* Foundation.framework */; };
+		B42F885B16E53C7F00647705 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885A16E53C7F00647705 /* CoreGraphics.framework */; };
+		B42F886116E53C7F00647705 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B42F885F16E53C7F00647705 /* InfoPlist.strings */; };
+		B42F886316E53C7F00647705 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F886216E53C7F00647705 /* main.m */; };
+		B42F886716E53C7F00647705 /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F886616E53C7F00647705 /* RDVAppDelegate.m */; };
+		B42F886916E53C7F00647705 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886816E53C7F00647705 /* Default.png */; };
+		B42F886B16E53C7F00647705 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886A16E53C7F00647705 /* Default@2x.png */; };
+		B42F886D16E53C7F00647705 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886C16E53C7F00647705 /* Default-568h@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B42F885316E53C7F00647705 /* RDVKeyboardAvoiding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDVKeyboardAvoiding.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B42F885616E53C7F00647705 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B42F885816E53C7F00647705 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B42F885A16E53C7F00647705 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B42F885E16E53C7F00647705 /* RDVKeyboardAvoiding-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RDVKeyboardAvoiding-Info.plist"; sourceTree = "<group>"; };
+		B42F886016E53C7F00647705 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B42F886216E53C7F00647705 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B42F886416E53C7F00647705 /* RDVKeyboardAvoiding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RDVKeyboardAvoiding-Prefix.pch"; sourceTree = "<group>"; };
+		B42F886516E53C7F00647705 /* RDVAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDVAppDelegate.h; sourceTree = "<group>"; };
+		B42F886616E53C7F00647705 /* RDVAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
+		B42F886816E53C7F00647705 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B42F886A16E53C7F00647705 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B42F886C16E53C7F00647705 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B42F885016E53C7F00647705 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42F885716E53C7F00647705 /* UIKit.framework in Frameworks */,
+				B42F885916E53C7F00647705 /* Foundation.framework in Frameworks */,
+				B42F885B16E53C7F00647705 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B42F884A16E53C7F00647705 = {
+			isa = PBXGroup;
+			children = (
+				B42F885C16E53C7F00647705 /* RDVKeyboardAvoiding */,
+				B42F885516E53C7F00647705 /* Frameworks */,
+				B42F885416E53C7F00647705 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B42F885416E53C7F00647705 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B42F885316E53C7F00647705 /* RDVKeyboardAvoiding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B42F885516E53C7F00647705 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B42F885616E53C7F00647705 /* UIKit.framework */,
+				B42F885816E53C7F00647705 /* Foundation.framework */,
+				B42F885A16E53C7F00647705 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B42F885C16E53C7F00647705 /* RDVKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				B42F886516E53C7F00647705 /* RDVAppDelegate.h */,
+				B42F886616E53C7F00647705 /* RDVAppDelegate.m */,
+				B42F885D16E53C7F00647705 /* Supporting Files */,
+			);
+			path = RDVKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		B42F885D16E53C7F00647705 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B42F885E16E53C7F00647705 /* RDVKeyboardAvoiding-Info.plist */,
+				B42F885F16E53C7F00647705 /* InfoPlist.strings */,
+				B42F886216E53C7F00647705 /* main.m */,
+				B42F886416E53C7F00647705 /* RDVKeyboardAvoiding-Prefix.pch */,
+				B42F886816E53C7F00647705 /* Default.png */,
+				B42F886A16E53C7F00647705 /* Default@2x.png */,
+				B42F886C16E53C7F00647705 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B42F885216E53C7F00647705 /* RDVKeyboardAvoiding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B42F887016E53C7F00647705 /* Build configuration list for PBXNativeTarget "RDVKeyboardAvoiding" */;
+			buildPhases = (
+				B42F884F16E53C7F00647705 /* Sources */,
+				B42F885016E53C7F00647705 /* Frameworks */,
+				B42F885116E53C7F00647705 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RDVKeyboardAvoiding;
+			productName = RDVKeyboardAvoiding;
+			productReference = B42F885316E53C7F00647705 /* RDVKeyboardAvoiding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B42F884B16E53C7F00647705 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RDV;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Robert Dimitrov";
+			};
+			buildConfigurationList = B42F884E16E53C7F00647705 /* Build configuration list for PBXProject "RDVKeyboardAvoiding" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B42F884A16E53C7F00647705;
+			productRefGroup = B42F885416E53C7F00647705 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B42F885216E53C7F00647705 /* RDVKeyboardAvoiding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B42F885116E53C7F00647705 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42F886116E53C7F00647705 /* InfoPlist.strings in Resources */,
+				B42F886916E53C7F00647705 /* Default.png in Resources */,
+				B42F886B16E53C7F00647705 /* Default@2x.png in Resources */,
+				B42F886D16E53C7F00647705 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B42F884F16E53C7F00647705 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B42F886316E53C7F00647705 /* main.m in Sources */,
+				B42F886716E53C7F00647705 /* RDVAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B42F885F16E53C7F00647705 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B42F886016E53C7F00647705 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B42F886E16E53C7F00647705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B42F886F16E53C7F00647705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B42F887116E53C7F00647705 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Prefix.pch";
+				INFOPLIST_FILE = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B42F887216E53C7F00647705 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Prefix.pch";
+				INFOPLIST_FILE = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B42F884E16E53C7F00647705 /* Build configuration list for PBXProject "RDVKeyboardAvoiding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B42F886E16E53C7F00647705 /* Debug */,
+				B42F886F16E53C7F00647705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B42F887016E53C7F00647705 /* Build configuration list for PBXNativeTarget "RDVKeyboardAvoiding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B42F887116E53C7F00647705 /* Debug */,
+				B42F887216E53C7F00647705 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B42F884B16E53C7F00647705 /* Project object */;
+}
