@@ -6,8 +6,8 @@ from [iOS SDK: Keeping Content From Underneath the Keyboard](http://mobile.tutsp
 ## Setup
 
 Drop the `RDVKeyboardAvoidingScrollView.h` and `RDVKeyboardAvoidingScrollView.m` into your project. If you don't have ARC
-enabled, you will need to set a `-fobjc-arc` compiler flag on both source files. For use with `UIViewController` classes,
-include `RDVKeyboardAvoidingScrollView.h` in your `UIViewController` subclass and set it's view to be an instance of this class.
+enabled, you will need to set a `-fobjc-arc` compiler flag on the `.m` source file. For use with `UIViewController` classes,
+include `RDVKeyboardAvoidingScrollView.h` in your `UIViewController` subclass and set its view to be an instance of this class.
 If you are using a xib file, set the view's class in the `Identity Inspector`.
 
 ## Example Usage
@@ -46,7 +46,7 @@ Set it to `nil` in `textFieldDidEndEditing:` or `textViewDidEndEditing:`:
 
 ## Contact
 
-[Robert Dimitrov](http://github.com/robbdimitrov)
+[Robert Dimitrov](http://github.com/robbdimitrov)  
 [@robbdimitrov](https://twitter.com/robbdimitrov)
 
 ## License
