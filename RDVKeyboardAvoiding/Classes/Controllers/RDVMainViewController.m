@@ -154,14 +154,6 @@
     return UIInterfaceOrientationMaskAllButUpsideDown;
 }
 
-- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
-        NSLog(@"will rotate to landscape");
-    } else {
-        NSLog(@"will rotate to portrait");
-    }
-}
-
 #pragma mark - Methods
 
 - (void)completeButtonTapped:(id)sender {
