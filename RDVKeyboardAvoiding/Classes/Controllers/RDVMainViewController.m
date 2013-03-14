@@ -65,36 +65,42 @@
     
     textField1 = [[UITextField alloc] initWithFrame:CGRectMake(20, 20, elementWidth, 30)];
     [textField1 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField1 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField1 setDelegate:self];
     [scrollView addSubview:textField1];
     
     textField2 = [[UITextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textField1.frame) + 20,
                                                                elementWidth, 30)];
     [textField2 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField2 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField2 setDelegate:self];
     [scrollView addSubview:textField2];
     
     textField3 = [[UITextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textField2.frame) + 20,
                                                                elementWidth, 30)];
     [textField3 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField3 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField3 setDelegate:self];
     [scrollView addSubview:textField3];
     
     textField4 = [[UITextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textField3.frame) + 20,
                                                                elementWidth, 30)];
     [textField4 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField4 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField4 setDelegate:self];
     [scrollView addSubview:textField4];
     
     textField5 = [[UITextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textField4.frame) + 20,
                                                                elementWidth, 30)];
     [textField5 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField5 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField5 setDelegate:self];
     [scrollView addSubview:textField5];
     
     textField6 = [[UITextField alloc] initWithFrame:CGRectMake(20, CGRectGetMaxY(textField5.frame) + 20,
                                                                elementWidth, 30)];
     [textField6 setBorderStyle:UITextBorderStyleRoundedRect];
+    [textField6 setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [textField6 setDelegate:self];
     [scrollView addSubview:textField6];
     
@@ -103,6 +109,7 @@
     completeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [completeButton setFrame:CGRectMake(20, CGRectGetMaxY(textField6.frame) + 20, elementWidth, 40)];
     [completeButton setTitle:@"Complete" forState:UIControlStateNormal];
+    [completeButton setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin|UIViewAutoresizingFlexibleRightMargin];
     [completeButton addTarget:self action:@selector(completeButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:completeButton];
     
@@ -125,6 +132,34 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return YES;
+    }
+    
+    return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
+}
+
+- (BOOL)shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger)supportedInterfaceOrientations {
+    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+        return UIInterfaceOrientationMaskAll;
+    }
+    
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
+- (void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
+    if (UIInterfaceOrientationIsLandscape(toInterfaceOrientation)) {
+        NSLog(@"will rotate to landscape");
+    } else {
+        NSLog(@"will rotate to portrait");
+    }
 }
 
 #pragma mark - Methods

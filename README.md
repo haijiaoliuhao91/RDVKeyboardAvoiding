@@ -1,7 +1,6 @@
 # RDVKeyboardAvoiding
 
-Handy scrollView, taking care of moving content from underneath the keyboard. It is build upon the code
-from [iOS SDK: Keeping Content From Underneath the Keyboard](http://mobile.tutsplus.com/tutorials/iphone/ios-sdk-keeping-content-from-underneath-the-keyboard/?search_index=1).
+Simple and powerful scrollView, taking care of moving content from underneath the keyboard.
 
 ## Setup
 
@@ -13,7 +12,7 @@ If you are using a xib file, set the view's class in the `Identity Inspector`.
 ## Requirements
 
 * ARC
-* iOS 5.0 and newer
+* iOS 5.0 or newer
 
 ## Example Usage
 

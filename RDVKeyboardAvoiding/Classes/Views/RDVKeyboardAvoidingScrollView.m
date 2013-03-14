@@ -59,8 +59,6 @@
 #pragma mark - Keyboard avoiding
 
 - (void)keyboardWasShown:(NSNotification *)notification {
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    [self moveContentFromBeneathTheKeyboard:keyboardSize];
     [self setKeyboardShown:YES];
 }
 
@@ -73,12 +71,15 @@
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification {
-    CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    [self moveContentFromBeneathTheKeyboard:keyboardSize];
+    CGRect keyboardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    // convert keyboardFrame to view's coordinate system, because it is given in the window's which is always portrait
+    // http://stackoverflow.com/questions/9746417/keyboard-willshow-and-willhide-vs-rotation
+    CGRect convertedFrame = [self convertRect:keyboardFrame fromView:self.window];
+    [self moveContentFromBeneathTheKeyboard:convertedFrame];
 }
 
-- (void)moveContentFromBeneathTheKeyboard:(CGSize)keyboardSize {
-    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
+- (void)moveContentFromBeneathTheKeyboard:(CGRect)keyboardFrame {
+    UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardFrame.size.height, 0.0);
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
 }
