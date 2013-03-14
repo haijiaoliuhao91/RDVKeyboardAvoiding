@@ -24,6 +24,8 @@
 
 @interface RDVKeyboardAvoidingScrollView ()
 
+@property (getter = isKeyboardShown) BOOL keyboardShown;
+
 @end
 
 @implementation RDVKeyboardAvoidingScrollView
@@ -50,23 +52,28 @@
     return self;
 }
 
+- (void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
 #pragma mark - Keyboard avoiding
 
 - (void)keyboardWasShown:(NSNotification *)notification {
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
     [self moveContentFromBeneathTheKeyboard:keyboardSize];
+    [self setKeyboardShown:YES];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
+    
+    [self setKeyboardShown:NO];
 }
 
 - (void)keyboardWillChangeFrame:(NSNotification *)notification {
     CGSize keyboardSize = [[[notification userInfo] objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
     [self moveContentFromBeneathTheKeyboard:keyboardSize];
 }
 
@@ -74,28 +81,6 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardSize.height, 0.0);
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
-    
-    if (self.activeView) {
-        CGRect aRect = self.frame;
-        aRect.size.height -= keyboardSize.height;
-        if (!CGRectContainsPoint(aRect, self.activeView.frame.origin) ) {
-            CGPoint scrollPoint = CGPointMake(0.0, CGRectGetMinY(self.activeView.frame) - (keyboardSize.height - 15));
-            [self setContentOffset:scrollPoint animated:YES];
-        }
-    }
-}
-
-#pragma mark - Methods
-
-- (void)setActiveView:(UIView *)activeView {
-    _activeView = activeView;
-    
-    [self displayActiveView];
-}
-
-// change content offset to display the active view
-- (void)displayActiveView {
-    
 }
 
 @end

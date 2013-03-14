@@ -32,6 +32,9 @@
 @property (nonatomic, strong) UITextField *textField5;
 @property (nonatomic, strong) UITextField *textField6;
 
+@property (nonatomic, strong) NSArray *textFields;
+@property (nonatomic, weak) UITextField *activeField;
+
 @property (nonatomic, strong) UIButton *completeButton;
 
 @end
@@ -95,6 +98,8 @@
     [textField6 setDelegate:self];
     [scrollView addSubview:textField6];
     
+    self.textFields = @[textField1, textField2, textField3, textField4, textField5, textField6];
+    
     completeButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [completeButton setFrame:CGRectMake(20, CGRectGetMaxY(textField6.frame) + 20, elementWidth, 40)];
     [completeButton setTitle:@"Complete" forState:UIControlStateNormal];
@@ -109,7 +114,11 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    
+    UIGestureRecognizer *tapGestureRegognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                        action:@selector(hideKeyboard:)];
+    [tapGestureRegognizer setCancelsTouchesInView:NO];
+    [self.view addGestureRecognizer:tapGestureRegognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -124,18 +133,28 @@
     NSLog(@"completeButtonTapped:");
 }
 
+- (void)hideKeyboard:(id)sender {
+    [self.activeField resignFirstResponder];
+}
+
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    
+    self.activeField = textField;
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    
+    self.activeField = nil;
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
-    [textField resignFirstResponder];
+    NSInteger textFieldIndex = [self.textFields indexOfObject:textField];
+    
+    if (textFieldIndex < self.textFields.count - 1) {
+        [(UITextField *)self.textFields[textFieldIndex + 1] becomeFirstResponder];
+    } else {
+        [textField resignFirstResponder];
+    }
     
     return YES;
 }

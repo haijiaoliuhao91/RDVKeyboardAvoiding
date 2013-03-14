@@ -22,25 +22,6 @@
 
 #import <UIKit/UIKit.h>
 
-@class RDVKeyboardAvoidingScrollView;
-
-@protocol RDVKeyboardAvoidingScrollViewDelegate <NSObject>
-
-@optional
-// Sent before reordering subviews
-- (void)keyboardAvoidingScrollViewWillReorderSubviews:(RDVKeyboardAvoidingScrollView *)keyboardAvoidingView;
-
-// Sent after reordering subviews
-- (void)keyboardAvoidingScrollViewDidReorderSubviews:(RDVKeyboardAvoidingScrollView *)keyboardAvoidingView;
-
-@end
-
 @interface RDVKeyboardAvoidingScrollView : UIScrollView
-
-// Set the activeView on textField(View)DidBeginEditing
-@property (weak, nonatomic) UIView *activeView;
-
-// Delegate to respons to the RDVKeyboardAvoidingScrollViewDelegate protocol methods
-@property (nonatomic, weak) id <RDVKeyboardAvoidingScrollViewDelegate> keyboardAvoidingDelegate;
 
 @end
