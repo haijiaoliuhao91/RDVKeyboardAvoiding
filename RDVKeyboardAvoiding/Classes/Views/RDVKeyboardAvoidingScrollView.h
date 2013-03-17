@@ -24,4 +24,6 @@
 
 @interface RDVKeyboardAvoidingScrollView : UIScrollView
 
+@property (nonatomic, weak) UIView *activeTextView;
+
 @end

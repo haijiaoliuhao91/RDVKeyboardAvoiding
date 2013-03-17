@@ -12,7 +12,7 @@ If you are using a xib file, set the view's class in the `Identity Inspector`.
 ## Requirements
 
 * ARC
-* iOS 5.0 or newer
+* iOS SDK 5.0 or later
 
 ## Example Usage
 
@@ -22,7 +22,7 @@ Initialize view controller's view to be an instance of `RDVKeyboardAvoiding`:
 - (void)loadView {
 	CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
 
-	RDVKeyboardAvoiding *scrollView = [[RDVKeyboardAvoiding alloc] initWithFrame:applicationFrame];
+	RDVKeyboardAvoidingScrollView *scrollView = [[RDVKeyboardAvoidingScrollView alloc] initWithFrame:applicationFrame];
 	[scrollView setAutoresizingMask:UIViewAutoresizingFlexibleHeight|UIViewAutoresizingFlexibleWidth];
 
 	// code...
@@ -30,6 +30,16 @@ Initialize view controller's view to be an instance of `RDVKeyboardAvoiding`:
 	self.view = scrollView;
 }
 ```
+
+Set the activeTextView property of RDVKeyboardAvoidingScrollView to `UITextField`/`UITextView` in `textFieldDidBeginEditing:`/`textViewDidBeginEditing:`:
+
+``` objective-c
+- (void)textFieldDidBeginEditing:(UITextField *)textField {
+    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:textField];
+}
+```
+
+Set the activeTextView property of RDVKeyboardAvoidingScrollView to `nil` in `textFieldDidEndEditing:`/`textViewDidEndEditing:`:
 
 ## Contact
 

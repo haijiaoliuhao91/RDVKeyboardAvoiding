@@ -22,9 +22,10 @@
 
 #import "RDVKeyboardAvoidingScrollView.h"
 
-@interface RDVKeyboardAvoidingScrollView ()
+@interface RDVKeyboardAvoidingScrollView () <UIGestureRecognizerDelegate>
 
 @property (getter = isKeyboardShown) BOOL keyboardShown;
+@property (strong) UIGestureRecognizer *tapGestureRegognizer;
 
 @end
 
@@ -48,12 +49,24 @@
                                                  selector:@selector(keyboardWillChangeFrame:)
                                                      name:UIKeyboardWillChangeFrameNotification
                                                    object:nil];
+        
+        _tapGestureRegognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                                            action:@selector(hideKeyboard:)];
+        [_tapGestureRegognizer setCancelsTouchesInView:NO];
+        [_tapGestureRegognizer setDelegate:self];
+        [self addGestureRecognizer:_tapGestureRegognizer];
     }
     return self;
 }
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+#pragma mark - Methods
+
+- (void)hideKeyboard:(id)sender {
+    [self.activeTextView resignFirstResponder];
 }
 
 #pragma mark - Keyboard avoiding
@@ -66,6 +79,7 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsZero;
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
+    self.contentOffset = CGPointZero;
     
     [self setKeyboardShown:NO];
 }
@@ -82,6 +96,29 @@
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardFrame.size.height, 0.0);
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
+    
+    if (![self isKeyboardShown]) {
+        // Change the content offset only for the first activeTextView, the system handles the rest
+        CGRect aRect = self.frame;
+        aRect.size.height -= keyboardFrame.size.height;
+        
+        if (!CGRectContainsPoint(aRect, self.activeTextView.frame.origin)) {
+            [self scrollRectToVisible:self.activeTextView.frame animated:YES];
+        }
+    }
+}
+
+#pragma mark - UIGestureRecognizerDelegate
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch {
+    if (gestureRecognizer == [self tapGestureRegognizer]) {
+        // Don't interfere with taps on UIControls
+        if ([[touch view] isKindOfClass:[UIControl class]]) {
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
 @end

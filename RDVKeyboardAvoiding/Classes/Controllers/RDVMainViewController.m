@@ -33,7 +33,6 @@
 @property (nonatomic, strong) UITextField *textField6;
 
 @property (nonatomic, strong) NSArray *textFields;
-@property (nonatomic, weak) UITextField *activeField;
 
 @property (nonatomic, strong) UIButton *completeButton;
 
@@ -113,7 +112,7 @@
     [completeButton addTarget:self action:@selector(completeButtonTapped:) forControlEvents:UIControlEventTouchUpInside];
     [scrollView addSubview:completeButton];
     
-    [scrollView setContentSize:CGSizeMake(scrollView.frame.size.width, CGRectGetMaxY(completeButton.frame) + 20)];
+    [scrollView setContentSize:CGSizeMake(applicationFrame.size.width, CGRectGetMaxY(completeButton.frame) + 20)];
     
     self.view = scrollView;
 }
@@ -121,11 +120,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    UIGestureRecognizer *tapGestureRegognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                        action:@selector(hideKeyboard:)];
-    [tapGestureRegognizer setCancelsTouchesInView:NO];
-    [self.view addGestureRecognizer:tapGestureRegognizer];
 }
 
 - (void)didReceiveMemoryWarning
@@ -160,18 +154,14 @@
     NSLog(@"completeButtonTapped:");
 }
 
-- (void)hideKeyboard:(id)sender {
-    [self.activeField resignFirstResponder];
-}
-
 #pragma mark - UITextFieldDelegate
 
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
-    self.activeField = textField;
+    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:textField];
 }
 
 - (void)textFieldDidEndEditing:(UITextField *)textField {
-    self.activeField = nil;
+    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:nil];
 }
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
