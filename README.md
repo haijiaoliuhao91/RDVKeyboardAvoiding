@@ -31,7 +31,7 @@ Initialize view controller's view to be an instance of `RDVKeyboardAvoiding`:
 }
 ```
 
-Set the activeTextView property of RDVKeyboardAvoidingScrollView to `UITextField`/`UITextView` in `textFieldDidBeginEditing:`/`textViewDidBeginEditing:`:
+Set the activeTextView property of RDVKeyboardAvoidingScrollView to `UITextField` / `UITextView` in `textFieldDidBeginEditing:` / `textViewDidBeginEditing:`:
 
 ``` objective-c
 - (void)textFieldDidBeginEditing:(UITextField *)textField {
@@ -39,7 +39,13 @@ Set the activeTextView property of RDVKeyboardAvoidingScrollView to `UITextField
 }
 ```
 
-Set the activeTextView property of RDVKeyboardAvoidingScrollView to `nil` in `textFieldDidEndEditing:`/`textViewDidEndEditing:`:
+Set the activeTextView property of RDVKeyboardAvoidingScrollView to `nil` in `textFieldDidEndEditing:` / `textViewDidEndEditing:`:
+
+```objective-c
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:nil];
+}
+```
 
 ## Contact
 
