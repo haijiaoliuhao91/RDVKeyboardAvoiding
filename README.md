@@ -12,7 +12,7 @@ If you are using a xib file, set the view's class in the `Identity Inspector`.
 ## Requirements
 
 * ARC
-* iOS SDK 5.0 or later
+* iOS 5.0 or later
 
 ## Example Usage
 
