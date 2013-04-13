@@ -10,14 +10,14 @@
 		B42F885716E53C7F00647705 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885616E53C7F00647705 /* UIKit.framework */; };
 		B42F885916E53C7F00647705 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885816E53C7F00647705 /* Foundation.framework */; };
 		B42F885B16E53C7F00647705 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885A16E53C7F00647705 /* CoreGraphics.framework */; };
-		B42F886116E53C7F00647705 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B42F885F16E53C7F00647705 /* InfoPlist.strings */; };
-		B42F886316E53C7F00647705 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F886216E53C7F00647705 /* main.m */; };
-		B42F886916E53C7F00647705 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886816E53C7F00647705 /* Default.png */; };
-		B42F886B16E53C7F00647705 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886A16E53C7F00647705 /* Default@2x.png */; };
-		B42F886D16E53C7F00647705 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B42F886C16E53C7F00647705 /* Default-568h@2x.png */; };
-		B42F887716E53E7800647705 /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F887616E53E7800647705 /* RDVAppDelegate.m */; };
-		B42F887C16E53F6A00647705 /* RDVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F887B16E53F6A00647705 /* RDVMainViewController.m */; };
-		B42F887F16E53F9100647705 /* RDVKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B42F887E16E53F9100647705 /* RDVKeyboardAvoidingScrollView.m */; };
+		B4A0F7BC17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0F7BB17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.m */; };
+		B4A0F7CD17194C4500BD3364 /* RDVAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0F7C117194C4500BD3364 /* RDVAppDelegate.m */; };
+		B4A0F7CE17194C4500BD3364 /* RDVMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0F7C417194C4500BD3364 /* RDVMainViewController.m */; };
+		B4A0F7CF17194C4500BD3364 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A0F7C517194C4500BD3364 /* Default-568h@2x.png */; };
+		B4A0F7D017194C4500BD3364 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A0F7C617194C4500BD3364 /* Default.png */; };
+		B4A0F7D117194C4500BD3364 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B4A0F7C717194C4500BD3364 /* Default@2x.png */; };
+		B4A0F7D217194C4500BD3364 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B4A0F7C817194C4500BD3364 /* InfoPlist.strings */; };
+		B4A0F7D317194C4500BD3364 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B4A0F7CA17194C4500BD3364 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,19 +25,19 @@
 		B42F885616E53C7F00647705 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B42F885816E53C7F00647705 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B42F885A16E53C7F00647705 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		B42F885E16E53C7F00647705 /* RDVKeyboardAvoiding-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RDVKeyboardAvoiding-Info.plist"; sourceTree = "<group>"; };
-		B42F886016E53C7F00647705 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		B42F886216E53C7F00647705 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B42F886416E53C7F00647705 /* RDVKeyboardAvoiding-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RDVKeyboardAvoiding-Prefix.pch"; sourceTree = "<group>"; };
-		B42F886816E53C7F00647705 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		B42F886A16E53C7F00647705 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		B42F886C16E53C7F00647705 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		B42F887516E53E7800647705 /* RDVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVAppDelegate.h; sourceTree = "<group>"; };
-		B42F887616E53E7800647705 /* RDVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
-		B42F887A16E53F6A00647705 /* RDVMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVMainViewController.h; sourceTree = "<group>"; };
-		B42F887B16E53F6A00647705 /* RDVMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVMainViewController.m; sourceTree = "<group>"; };
-		B42F887D16E53F9100647705 /* RDVKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
-		B42F887E16E53F9100647705 /* RDVKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		B4A0F7BA17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		B4A0F7BB17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		B4A0F7C017194C4500BD3364 /* RDVAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVAppDelegate.h; sourceTree = "<group>"; };
+		B4A0F7C117194C4500BD3364 /* RDVAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVAppDelegate.m; sourceTree = "<group>"; };
+		B4A0F7C317194C4500BD3364 /* RDVMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RDVMainViewController.h; sourceTree = "<group>"; };
+		B4A0F7C417194C4500BD3364 /* RDVMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RDVMainViewController.m; sourceTree = "<group>"; };
+		B4A0F7C517194C4500BD3364 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		B4A0F7C617194C4500BD3364 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		B4A0F7C717194C4500BD3364 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		B4A0F7C917194C4500BD3364 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B4A0F7CA17194C4500BD3364 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B4A0F7CB17194C4500BD3364 /* RDVKeyboardAvoiding-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "RDVKeyboardAvoiding-Info.plist"; sourceTree = "<group>"; };
+		B4A0F7CC17194C4500BD3364 /* RDVKeyboardAvoiding-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RDVKeyboardAvoiding-Prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				B42F885C16E53C7F00647705 /* RDVKeyboardAvoiding */,
+				B4A0F7BD17194C4500BD3364 /* Example */,
 				B42F885516E53C7F00647705 /* Frameworks */,
 				B42F885416E53C7F00647705 /* Products */,
 			);
@@ -84,61 +85,60 @@
 		B42F885C16E53C7F00647705 /* RDVKeyboardAvoiding */ = {
 			isa = PBXGroup;
 			children = (
-				B42F887316E53CE300647705 /* Classes */,
-				B42F885D16E53C7F00647705 /* Supporting Files */,
+				B4A0F7BA17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.h */,
+				B4A0F7BB17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.m */,
 			);
 			path = RDVKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
-		B42F885D16E53C7F00647705 /* Supporting Files */ = {
+		B4A0F7BD17194C4500BD3364 /* Example */ = {
 			isa = PBXGroup;
 			children = (
-				B42F885E16E53C7F00647705 /* RDVKeyboardAvoiding-Info.plist */,
-				B42F885F16E53C7F00647705 /* InfoPlist.strings */,
-				B42F886216E53C7F00647705 /* main.m */,
-				B42F886416E53C7F00647705 /* RDVKeyboardAvoiding-Prefix.pch */,
-				B42F886816E53C7F00647705 /* Default.png */,
-				B42F886A16E53C7F00647705 /* Default@2x.png */,
-				B42F886C16E53C7F00647705 /* Default-568h@2x.png */,
+				B4A0F7BE17194C4500BD3364 /* Classes */,
+				B4A0F7D517194C5900BD3364 /* Supporting Files */,
 			);
-			name = "Supporting Files";
+			path = Example;
 			sourceTree = "<group>";
 		};
-		B42F887316E53CE300647705 /* Classes */ = {
+		B4A0F7BE17194C4500BD3364 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B42F887416E53E3200647705 /* App Delegate */,
-				B42F887816E53F0200647705 /* Controllers */,
-				B42F887916E53F0200647705 /* Views */,
+				B4A0F7BF17194C4500BD3364 /* App Delegate */,
+				B4A0F7C217194C4500BD3364 /* Controllers */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		B42F887416E53E3200647705 /* App Delegate */ = {
+		B4A0F7BF17194C4500BD3364 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
-				B42F887516E53E7800647705 /* RDVAppDelegate.h */,
-				B42F887616E53E7800647705 /* RDVAppDelegate.m */,
+				B4A0F7C017194C4500BD3364 /* RDVAppDelegate.h */,
+				B4A0F7C117194C4500BD3364 /* RDVAppDelegate.m */,
 			);
 			path = "App Delegate";
 			sourceTree = "<group>";
 		};
-		B42F887816E53F0200647705 /* Controllers */ = {
+		B4A0F7C217194C4500BD3364 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B42F887A16E53F6A00647705 /* RDVMainViewController.h */,
-				B42F887B16E53F6A00647705 /* RDVMainViewController.m */,
+				B4A0F7C317194C4500BD3364 /* RDVMainViewController.h */,
+				B4A0F7C417194C4500BD3364 /* RDVMainViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		B42F887916E53F0200647705 /* Views */ = {
+		B4A0F7D517194C5900BD3364 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B42F887D16E53F9100647705 /* RDVKeyboardAvoidingScrollView.h */,
-				B42F887E16E53F9100647705 /* RDVKeyboardAvoidingScrollView.m */,
+				B4A0F7C517194C4500BD3364 /* Default-568h@2x.png */,
+				B4A0F7C617194C4500BD3364 /* Default.png */,
+				B4A0F7C717194C4500BD3364 /* Default@2x.png */,
+				B4A0F7C817194C4500BD3364 /* InfoPlist.strings */,
+				B4A0F7CA17194C4500BD3364 /* main.m */,
+				B4A0F7CB17194C4500BD3364 /* RDVKeyboardAvoiding-Info.plist */,
+				B4A0F7CC17194C4500BD3364 /* RDVKeyboardAvoiding-Prefix.pch */,
 			);
-			path = Views;
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,10 +193,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42F886116E53C7F00647705 /* InfoPlist.strings in Resources */,
-				B42F886916E53C7F00647705 /* Default.png in Resources */,
-				B42F886B16E53C7F00647705 /* Default@2x.png in Resources */,
-				B42F886D16E53C7F00647705 /* Default-568h@2x.png in Resources */,
+				B4A0F7CF17194C4500BD3364 /* Default-568h@2x.png in Resources */,
+				B4A0F7D017194C4500BD3364 /* Default.png in Resources */,
+				B4A0F7D117194C4500BD3364 /* Default@2x.png in Resources */,
+				B4A0F7D217194C4500BD3364 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,20 +207,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B42F886316E53C7F00647705 /* main.m in Sources */,
-				B42F887716E53E7800647705 /* RDVAppDelegate.m in Sources */,
-				B42F887C16E53F6A00647705 /* RDVMainViewController.m in Sources */,
-				B42F887F16E53F9100647705 /* RDVKeyboardAvoidingScrollView.m in Sources */,
+				B4A0F7BC17194C2200BD3364 /* RDVKeyboardAvoidingScrollView.m in Sources */,
+				B4A0F7CD17194C4500BD3364 /* RDVAppDelegate.m in Sources */,
+				B4A0F7CE17194C4500BD3364 /* RDVMainViewController.m in Sources */,
+				B4A0F7D317194C4500BD3364 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B42F885F16E53C7F00647705 /* InfoPlist.strings */ = {
+		B4A0F7C817194C4500BD3364 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B42F886016E53C7F00647705 /* en */,
+				B4A0F7C917194C4500BD3364 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -287,9 +287,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/RDVKeyboardAvoiding-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Info.plist";
+				INFOPLIST_FILE = "Example/RDVKeyboardAvoiding-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -302,9 +302,9 @@
 			buildSettings = {
 				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Prefix.pch";
+				GCC_PREFIX_HEADER = "Example/RDVKeyboardAvoiding-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
-				INFOPLIST_FILE = "RDVKeyboardAvoiding/RDVKeyboardAvoiding-Info.plist";
+				INFOPLIST_FILE = "Example/RDVKeyboardAvoiding-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -35,28 +35,13 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardWasShown:)
-                                                     name:UIKeyboardDidShowNotification
-                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardWillHide:)
-                                                     name:UIKeyboardWillHideNotification
-                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(keyboardWillChangeFrame:)
-                                                     name:UIKeyboardWillChangeFrameNotification
-                                                   object:nil];
-        
-        _tapGestureRegognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
-                                                                                            action:@selector(hideKeyboard:)];
-        [_tapGestureRegognizer setCancelsTouchesInView:NO];
-        [_tapGestureRegognizer setDelegate:self];
-        [self addGestureRecognizer:_tapGestureRegognizer];
+        [self configureKeyboardAvoiding];
     }
     return self;
+}
+
+- (void)awakeFromNib {
+    [self configureKeyboardAvoiding];
 }
 
 - (void)dealloc {
@@ -67,6 +52,29 @@
 
 - (void)hideKeyboard:(id)sender {
     [self.activeTextView resignFirstResponder];
+}
+
+- (void)configureKeyboardAvoiding {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillChangeFrame:)
+                                                 name:UIKeyboardWillChangeFrameNotification
+                                               object:nil];
+    
+    _tapGestureRegognizer = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                    action:@selector(hideKeyboard:)];
+    [_tapGestureRegognizer setCancelsTouchesInView:NO];
+    [_tapGestureRegognizer setDelegate:self];
+    [self addGestureRecognizer:_tapGestureRegognizer];
 }
 
 #pragma mark - Keyboard avoiding
