@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B42EB70117C3ACC000E57BE4 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = B42EB6FC17C3ACBF00E57BE4 /* LICENSE */; };
+		B42EB70217C3ACC000E57BE4 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B42EB6FD17C3ACC000E57BE4 /* README.md */; };
+		B42EB70417C3ACC000E57BE4 /* iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = B42EB70017C3ACC000E57BE4 /* iPhone.png */; };
 		B42F885716E53C7F00647705 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885616E53C7F00647705 /* UIKit.framework */; };
 		B42F885916E53C7F00647705 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885816E53C7F00647705 /* Foundation.framework */; };
 		B42F885B16E53C7F00647705 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B42F885A16E53C7F00647705 /* CoreGraphics.framework */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B42EB6FC17C3ACBF00E57BE4 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		B42EB6FD17C3ACC000E57BE4 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		B42EB70017C3ACC000E57BE4 /* iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPhone.png; sourceTree = "<group>"; };
 		B42F885316E53C7F00647705 /* RDVKeyboardAvoiding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RDVKeyboardAvoiding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B42F885616E53C7F00647705 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B42F885816E53C7F00647705 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -54,9 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B42EB6FE17C3ACC000E57BE4 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				B42EB70017C3ACC000E57BE4 /* iPhone.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		B42F884A16E53C7F00647705 = {
 			isa = PBXGroup;
 			children = (
+				B42EB6FC17C3ACBF00E57BE4 /* LICENSE */,
+				B42EB6FD17C3ACC000E57BE4 /* README.md */,
+				B42EB6FE17C3ACC000E57BE4 /* Screenshots */,
 				B42F885C16E53C7F00647705 /* RDVKeyboardAvoiding */,
 				B4A0F7BD17194C4500BD3364 /* Example */,
 				B42F885516E53C7F00647705 /* Frameworks */,
@@ -197,6 +214,9 @@
 				B4A0F7D017194C4500BD3364 /* Default.png in Resources */,
 				B4A0F7D117194C4500BD3364 /* Default@2x.png in Resources */,
 				B4A0F7D217194C4500BD3364 /* InfoPlist.strings in Resources */,
+				B42EB70117C3ACC000E57BE4 /* LICENSE in Resources */,
+				B42EB70217C3ACC000E57BE4 /* README.md in Resources */,
+				B42EB70417C3ACC000E57BE4 /* iPhone.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
