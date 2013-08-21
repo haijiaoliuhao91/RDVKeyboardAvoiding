@@ -101,6 +101,8 @@
 }
 
 - (void)moveContentFromBeneathTheKeyboard:(CGRect)keyboardFrame {
+    keyboardFrame = CGRectIntersection(self.frame, keyboardFrame);
+    
     UIEdgeInsets contentInsets = UIEdgeInsetsMake(0.0, 0.0, keyboardFrame.size.height, 0.0);
     self.contentInset = contentInsets;
     self.scrollIndicatorInsets = contentInsets;
