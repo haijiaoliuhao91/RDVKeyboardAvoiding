@@ -1,4 +1,5 @@
 // RDVMainViewController.m
+// RDVKeyboardAvoiding
 //
 // Copyright (c) 2013 Robert Dimitrov
 //
@@ -120,12 +121,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    [[[self navigationController] navigationBar] setTranslucent:NO];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
@@ -152,6 +149,8 @@
 
 - (void)completeButtonTapped:(id)sender {
     NSLog(@"completeButtonTapped:");
+    
+    [[(RDVKeyboardAvoidingScrollView *)self.view activeTextView] resignFirstResponder];
 }
 
 #pragma mark - UITextFieldDelegate

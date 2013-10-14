@@ -1,4 +1,5 @@
 // RDVAppDelegate.m
+// RDVKeyboardAvoiding
 //
 // Copyright (c) 2013 Robert Dimitrov
 //
@@ -28,7 +29,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.mainViewController = [[RDVMainViewController alloc] init];
     UIViewController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainViewController];
     self.window.rootViewController = navigationController;
