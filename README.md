@@ -51,7 +51,7 @@ Set the activeTextView property of RDVKeyboardAvoidingScrollView to `nil` in `te
 
 ## Contact
 
-[Robert Dimitrov](http://robbdimitrov.com)
+[Robert Dimitrov](http://robbdimitrov.com)   
 [@robbdimitrov](https://twitter.com/robbdimitrov)
 
 ## License
