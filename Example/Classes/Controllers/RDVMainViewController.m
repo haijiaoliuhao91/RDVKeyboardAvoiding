@@ -149,19 +149,9 @@
 
 - (void)completeButtonTapped:(id)sender {
     NSLog(@"completeButtonTapped:");
-    
-    [[(RDVKeyboardAvoidingScrollView *)self.view activeTextView] resignFirstResponder];
 }
 
 #pragma mark - UITextFieldDelegate
-
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:textField];
-}
-
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:nil];
-}
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     NSInteger textFieldIndex = [self.textFields indexOfObject:textField];

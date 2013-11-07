@@ -15,7 +15,7 @@ If you are using a xib file, set the view's class in the `Identity Inspector`.
 
 Initialize view controller's view to be an instance of `RDVKeyboardAvoiding`:
 
-``` objective-c
+```
 - (void)loadView {
 	CGRect applicationFrame = [[UIScreen mainScreen] applicationFrame];
 
@@ -25,22 +25,6 @@ Initialize view controller's view to be an instance of `RDVKeyboardAvoiding`:
 	// code...
 
 	self.view = scrollView;
-}
-```
-
-Set the activeTextView property of RDVKeyboardAvoidingScrollView to `UITextField` / `UITextView` in `textFieldDidBeginEditing:` / `textViewDidBeginEditing:`:
-
-``` objective-c
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:textField];
-}
-```
-
-Set the activeTextView property of RDVKeyboardAvoidingScrollView to `nil` in `textFieldDidEndEditing:` / `textViewDidEndEditing:`:
-
-```objective-c
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    [(RDVKeyboardAvoidingScrollView *)self.view setActiveTextView:nil];
 }
 ```
 

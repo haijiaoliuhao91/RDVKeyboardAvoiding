@@ -23,7 +23,9 @@
 
 #import "RDVKeyboardAvoidingScrollView.h"
 
-@interface RDVKeyboardAvoidingScrollView () <UIGestureRecognizerDelegate>
+@interface RDVKeyboardAvoidingScrollView () <UIGestureRecognizerDelegate> {
+    UIView *_activeTextView;
+}
 
 @property (getter = isKeyboardShown) BOOL keyboardShown;
 @property (strong) UIGestureRecognizer *tapGestureRegognizer;
@@ -117,6 +119,18 @@
             [self scrollRectToVisible:self.activeTextView.frame animated:YES];
         }
     }
+}
+
+- (UIView *)activeTextView {
+    if (![_activeTextView isFirstResponder]) {
+        for (UIView *view in [self subviews]) {
+            if ([view isFirstResponder]) {
+                _activeTextView = view;
+                break;
+            }
+        }
+    }
+    return _activeTextView;
 }
 
 #pragma mark - UIGestureRecognizerDelegate
