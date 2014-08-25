@@ -123,14 +123,32 @@
 
 - (UIView *)activeTextView {
     if (![_activeTextView isFirstResponder]) {
-        for (UIView *view in [self subviews]) {
-            if ([view isFirstResponder]) {
-                _activeTextView = view;
-                break;
+        UIView *activeView = [self activeTextViewFromSubviews:self.subviews];
+        if (activeView.isFirstResponder) {
+            _activeTextView = activeView;
+            if (_activeTextView) {
+                [self scrollRectToVisible:_activeTextView.frame animated:YES];
             }
         }
     }
     return _activeTextView;
+}
+
+- (UIView *)activeTextViewFromSubviews:(NSArray *)subviews {
+    for (UIView *view in subviews) {
+        if (view.subviews.count) {
+            UIView *activeView = [self activeTextViewFromSubviews:view.subviews];
+            if (activeView.isFirstResponder) {
+                return activeView;
+            }
+        }
+        else {
+            if (view.isFirstResponder) {
+                return view;
+            }
+        }
+    }
+    return nil;
 }
 
 #pragma mark - UIGestureRecognizerDelegate
